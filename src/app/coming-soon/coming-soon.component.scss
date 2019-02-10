@@ -1,0 +1,230 @@
+@import "../../assets/styles/mixins";
+
+.cover {
+  background-color: white;
+  background-image: url('/assets/images/background/converge.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  .tint {
+    background-color: rgba(255, 255, 255, .85);
+    width: 100%;
+    height: 100%;
+    .content-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      .brand {
+        .logo {
+          width: 400px;
+          margin: auto;
+          img {
+            width: 100%;
+          }
+          .tagline {
+            text-align: right;
+            font-style: italic;
+            p {
+              margin: auto;
+            }
+          }
+        }
+      }
+      .coming-soon {
+        text-align: center;
+        .coming-soon-wrapper {
+          width: 60%;
+          padding: 0 15px;
+          margin: auto;
+          box-sizing: border-box;
+          h2 {
+            font-size: 5rem;
+            margin: 50px auto 20px;
+          }
+        }
+      }
+      .subscribe {
+        margin-top: 70px;
+        text-align: center;
+        transition: all .4 ease-in-out;
+        .form-wrapper {
+          width: 40%;
+          margin: auto;
+          padding: 0 15px;
+          box-sizing: border-box;
+          form {
+            display: flex;
+            background-color: white;
+            border: 1px solid #001E50;
+            input {
+              padding: 0;
+              margin: 0;
+              width: 0;
+              border: none;
+              box-sizing: border-box;
+              transition: all .6s ease-in-out .5s;
+              @include placeholder {
+                font-style: italic;
+                color: #77777770;
+              }
+            }
+            button {
+              position: relative;
+              background-color: transparent;
+              flex: 1;
+              color: #001E50;
+              font-size: 18px;
+              text-align: center;
+              height: 50px;
+              cursor: pointer;
+              box-sizing: border-box;
+              transition: all .4s ease-in-out;
+              &:active:hover, &:hover {
+                background-color: #001E50;
+                color: white;
+              }
+              &:focus {
+                outline: none;
+              }
+              span {
+                position: absolute;
+                width: 100%;
+                line-height: 2.6;
+                bottom: 0;
+                right: 0;
+              }
+              #notify {
+                transition: all .6s ease-in-out;
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .tint {
+      .content-wrapper {
+        .coming-soon {
+          .coming-soon-wrapper {
+            width: 80%;
+          }
+        }
+        .subscribe {
+          .form-wrapper {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 722px) {
+    .tint {
+      .content-wrapper {
+        .coming-soon {
+          .coming-soon-wrapper {
+            width: 100%;
+            h2 {
+              font-size: 4rem;
+            }
+          }
+        }
+        .subscribe {
+          .form-wrapper {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .tint {
+      .content-wrapper {
+        .brand {
+          .logo {
+            width: 300px;
+            .tagline {
+
+            }
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .coming-soon {
+          .coming-soon-wrapper {
+            h2 {
+              font-size: 3rem;
+            }
+          }
+        }
+        .subscribe {
+          .form-wrapper {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .tint {
+      .content-wrapper {
+        .brand {
+          .logo {
+            width: 250px;
+          }
+        }
+        .coming-soon {
+          .coming-soon-wrapper {
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+        .subscribe {
+          .form-wrapper {
+            form {
+              button {
+                font-size: 14px;
+                span {
+                  line-height: 3.3;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .tint {
+      .content-wrapper {
+        .subscribe {
+          .form-wrapper {
+            form {
+              flex-direction: column;
+              input {
+                height: 0;
+                width: 100%;
+              }
+              button {
+                font-size: 14px;
+                span {
+                  line-height: 3.3;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
