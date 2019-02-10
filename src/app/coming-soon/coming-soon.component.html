@@ -1,0 +1,31 @@
+<section class="cover">
+  <div class="tint">
+    <div class="content-wrapper">
+      <article class="brand">
+        <div class="logo">
+          <img src="/assets/images/logo/bluelogo.png" alt="Logo">
+          <div class="tagline">
+            <p>...think it, build it.</p>
+          </div>
+        </div>
+      </article>
+      <article class="coming-soon">
+        <div class="coming-soon-wrapper">
+          <h2 (click)=getScreenSize()>Coming Soon</h2>
+          <p>We understand your need for efficiency in running your business. We are coming to help you define technological strategies as well as build technologies that you help you run your business efficiently and stay ahead of the competition.</p>
+        </div>
+      </article>
+      <article class="subscribe">
+        <div class="form-wrapper">
+          <form class="" method="post">
+            <input type="email" name="email" id="email" placeholder="Enter your email address" [ngStyle]="inputStyles">
+            <button type="button" [style.width]="buttonWidth" (click)=changeState()>
+              <span [style.opacity]="inform">Let me know when you are operational</span>
+              <span id="notify" [style.opacity]="notify">Notify me!</span>
+            </button>
+          </form>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
